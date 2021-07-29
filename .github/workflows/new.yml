@@ -15,6 +15,6 @@ jobs:
         name: Create GitHub deployment
         id: deployment
         with:
-          token: "${{ secrets.SECRET_KEY }}"
+          token: "${{ secrets.secret_key }}"
 #           target_url: http://my-app-url.com
           environment: production
