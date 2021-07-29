@@ -11,7 +11,7 @@ jobs:
       - run: npm install -g bats
       - run: bats -v
       
-      - uses: chrnorm/deployment-action@releases/v1
+      - uses: Naveenmishra1197/deployment-action@releases/v1
         name: Create GitHub deployment
         id: deployment
         with:
