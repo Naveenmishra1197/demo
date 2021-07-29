@@ -16,5 +16,5 @@ jobs:
         id: deployment
         with:
           token: "${{ secrets.SECRET_KEY }}"
-          target_url: http://my-app-url.com
+#           target_url: http://my-app-url.com
           environment: production
