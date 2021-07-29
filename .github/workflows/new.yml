@@ -15,6 +15,14 @@ jobs:
         name: Create GitHub deployment
         id: deployment
         with:
-          token: "${{ secrets.secret_key }}"
-#           target_url: http://my-app-url.com
+          token: "${{ github.token }}"
+          target_url: http://my-app-url.com       
           environment: production
+          
+      - name : Update deployment status
+        uses: ./
+        with:
+          token: "${{ github.token }}"
+          target_url: http://my-app-url.com
+          state: "success"
+          deployment_id: ${{ steps.deployment.outputs.deployment_id }}
